@@ -1,0 +1,36 @@
+<div class="main">
+	<p id="notice"><%= notice %></p>
+
+	<h1>
+	  <b>Title:</b>
+	  <%= @post.title %>
+	</h1>
+
+	<p>
+	  <b>Name:</b>
+	  <%= @post.name %>
+	</p>
+
+	<p>
+		<b>category:</b>
+		<%= @post.category.name %>&nbsp;&nbsp;&nbsp;&nbsp;
+		<%= time_ago_in_words @post.created_at %>&nbsp;ago
+		<%= link_to 'Edit', edit_post_path(@post) %> |
+		<%= link_to 'Back', posts_path %>
+	<p>
+<div class="content">
+	<b>Content:</b>
+	<%= @post.content %>
+	</p>
+</div>
+<br>
+	评论(<%= @post.commemts.size%>)<br>
+	<% @commemts.each do |commemt| %>
+	<%= commemt.content %>&nbsp;&nbsp;&nbsp;&nbsp;<%= time_ago_in_words @post.created_at %>&nbsp;ago
+	<% end %>
+	<br>
+	
+	<%=render 'commemts/form' %>
+	
+</div>
+

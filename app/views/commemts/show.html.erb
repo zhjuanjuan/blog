@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @commemt.content %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%= @commemt.post_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_commemt_path(@commemt) %> |
+<%= link_to 'Back', commemts_path %>

@@ -1,0 +1,23 @@
+<h1>Listing commtent1s</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @commtent1s.each do |commtent1| %>
+  <tr>
+    <td><%= commtent1.content %></td>
+    <td><%= link_to 'Show', commtent1 %></td>
+    <td><%= link_to 'Edit', edit_commtent1_path(commtent1) %></td>
+    <td><%= link_to 'Destroy', commtent1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Commtent1', new_commtent1_path %>

@@ -1,0 +1,41 @@
+@import "compass";
+
+body{
+	background: #f2f2f2;
+}
+.header {
+	background: #000;
+	@include clearfix;
+	ul{
+		li{
+			@include float-left;
+			a{
+				color: #fff;
+				padding: .7em 1em;
+				text-decoration: none;
+				@include inline-block;
+				&:hover{
+					background:#999;
+				}/* shu biao yi shang qu zhi hou,biao qian ye huan yan se*/
+			}
+		}
+
+	}
+
+}
+.main {
+	background: #fff;
+	width: 960px;
+	margin: 2em auto;
+	border: 1px solid #ddd;
+	padding: 2em;
+	line-height: 1.5em;
+	h1{
+		font-size: 2em;
+		margin-bottom:1em; 
+	}
+	.content{
+		border-top: 1px solid #ddd;
+		margin-top: 2em;
+	}
+}
